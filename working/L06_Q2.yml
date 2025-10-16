@@ -1,0 +1,27 @@
+name: Egocentric Commit Guard
+
+on:
+  push:
+    branches:
+        - main
+    pull_request:
+      branches:
+        - main
+
+jobs:
+  validate-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Check if README contains your name
+        run: |
+          NAME="Giovanni Ferrante"
+          if ! grep -q "$NAME" README.md; then
+            echo "README.md does not contain your name: '$NAME'"
+            echo "Add your name to README.md before committing."
+            exit 1
+          else
+            echo "README.md mentions you — proceeding."
+          fi
