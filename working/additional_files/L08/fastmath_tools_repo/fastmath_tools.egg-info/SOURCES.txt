@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+fastmath_tools/__init__.py
+fastmath_tools/math_utils.py
+fastmath_tools/slow_code.py
+fastmath_tools/version.py
+fastmath_tools.egg-info/PKG-INFO
+fastmath_tools.egg-info/SOURCES.txt
+fastmath_tools.egg-info/dependency_links.txt
+fastmath_tools.egg-info/requires.txt
+fastmath_tools.egg-info/top_level.txt
+tests/test_math_utils.py
+tests/test_slow_code.py

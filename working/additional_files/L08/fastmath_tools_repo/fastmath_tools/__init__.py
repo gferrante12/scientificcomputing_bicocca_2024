@@ -1,0 +1,1 @@
+from slow_code import slow_sum, fast_sum
